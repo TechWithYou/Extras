@@ -1,0 +1,14 @@
+{
+    "version": "0.1.8",
+    "description": "DJ app with stem separation, a mix editor and live decks",
+    "homepage": "https://www.stemdeckdj.app",
+    "license": { "identifier": "Proprietary", "url": "https://www.stemdeckdj.app/terms" },
+    "architecture": {
+        "64bit": { "url": "https://techwithyou.s3.us-west-2.amazonaws.com/downloads/stemdeck/Stemdeck-0.1.8-windows-x64.zip", "hash": "03108c757e4b6e746925424d032f99bd9d36a1755a0598685d4c1fc752dde261", "extract_dir": "Stemdeck" }
+    },
+    "shortcuts": [["Stemdeck.exe", "Stemdeck"]],
+    "checkver": { "url": "https://techwithyou.s3.us-west-2.amazonaws.com/downloads/stemdeck/latest.json", "jsonpath": "$.version" },
+    "autoupdate": {
+        "architecture": { "64bit": { "url": "https://techwithyou.s3.us-west-2.amazonaws.com/downloads/stemdeck/Stemdeck-$version-windows-x64.zip", "hash": { "url": "$url.sha256" } } }
+    }
+}
